@@ -109,6 +109,7 @@ int main()
 }
 ```
 step3
+```cpp
 #include <stdio.h>
 int main()
 {
@@ -126,6 +127,7 @@ int main()
 }
 ```
 step4
+```cpp
 #include <stdio.h>
 int main()
 {
