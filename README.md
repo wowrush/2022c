@@ -138,5 +138,83 @@ int main()
     }
 }
 ```
+#week 08
+step 1
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int a=1; a<=n; a++)
+    {
+        for(int b=1; b<=n; b++)
+        {
+            if(b<=n-a)
+                printf(" ");
+            else
+                printf("*");
+        }
+     printf("\n");
+    }
+}
+```
+step 2
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    int a=1;
+    while(a<=n){
+        int b=1;
+        while(b<=n){
+            if(b<=n-a) printf(" ");
+            else printf("*");
+            b++;
+        }
+        a++;
+        printf("\n");
+    }
+}
+```
+step 3
+```cpp
+#include <stdio.h>
+int main()
+
+{
+    printf("判斷你的數字是不是質數:");
+    int n;
+    scanf("%d",&n);
+
+    int bad=0;
+    for(int a=2; a<n; a++){
+        if(n%a==0) bad=1;
+    }
+    if(bad==0) printf("%d 是質數(沒有壞掉)",n);
+    else printf("%d 不是質數(早就壞掉了)",n);
+}
+```
+step 4
+```cpp
+#include <stdio.h>
+int main()
+
+{
+    int a;
+    scanf("%d",&a);
+
+    for(int i=2; i<=a; i++){
+        int bad=0;
+        for(int s=2; s<i; s++){
+            if(i%s==0) bad=1;
+        }
+        if(bad==0) printf("%d",i);
+    }
+}
+```
 
 
