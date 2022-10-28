@@ -138,7 +138,7 @@ int main()
     }
 }
 ```
-#week 08
+# week 08
 step 1
 ```cpp
 #include <stdio.h>
