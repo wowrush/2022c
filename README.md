@@ -245,5 +245,126 @@ int main()
 }
 ```
 
+# week11
+step 1
+```cpp
+#include <stdio.h.>
+int main()
+{
+    int a=90, b=80;
+    int temp = a;
+    a=b;
+    b=temp;
+    printf("%d %d",a,b);
+}
+```
+step 2
+```cpp
+#include <stdio.h.>
+int main()
+{
+    int a=90, b=80, c=70;
+    if(a>b){
+        int temp = a;
+        a=b;
+        b=temp;
+    }
+    if(b>c){
+        int temp = b;
+        b=c;
+        c=temp;
+    }
+    if(a>b){
+        int temp = a;
+        a=b;
+        b=temp;
+    }
+    printf("a:%d b:%d c:%d",a,b,c);
+}
+```
+step 3
+```cpp
+#include <stdio.h>
+int a[10]{90,80,70,60,50,40,30,20,1,0};
+int main()
+{
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0; i<10-1; i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+}
+```
+step 4
+```cpp
+#include <stdio.h>
+int a[10]{90,80,70,60,50,40,30,20,1,0};
+int main()
+{
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0; i<10-1; i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0; i<10-1; i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int i=0; i<10-1; i++){
+        if(a[i]>a[i+1]){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+}
+```
+step 5
+```cpp
+#include <stdio.h>
+int a[10]{90,80,70,60,50,40,30,20,1,0};
+int main()
+{
+    for(int i=0; i<10; i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for(int q=0; q<10-1; q++){
+
+        for(int i=0; i<10-1; i++){
+            if(a[i]>a[i+1]){
+                int temp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=temp;
+            }
+        }
+        for(int i=0; i<10; i++) printf("%d ",a[i]);
+            printf("\n");
+        }
+}
+```
+
 
 
