@@ -479,3 +479,84 @@ int main()
 	}
 }
 ```
+# week13
+step 1
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int a[20];
+	for(int i=0; i<n; i++){
+		scanf("%d",&a[i]);
+	}
+	int right,left;
+	int ans=-99999999;
+	for(int i=0; i<n; i++){
+		for(int j=i+1; j<n; j++){
+			if(a[j]-a[i] > ans){
+				ans=a[j]-a[i];
+				left=a[i];
+				right=a[j];
+			}
+		}
+	}
+		printf("請按任意鍵繼續 . . . \n");
+		printf("最大利潤=%d-%d=%d\n",right,left,ans);
+}
+```
+step 2
+```cpp
+#include <stdio.h>
+int main()
+{
+
+	int f[45];
+	f[0]=0;
+	f[1]=1;
+	for(int a=2; a<45; a++){
+        f[a]=f[a-1]+f[a-2];
+    }
+    for(int a=0; a<45; a++){
+        printf("%d ",f[a]);
+    }
+}
+step 3
+```cpp
+#include <stdio.h>
+int a[200][200];
+int main()
+{
+	int m,n;
+	scanf("%d%d",&m,&n);
+	for(int i=0; i<m; i++){
+		for(int j=0; j<n; j++){
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("\n");
+	for(int i=m-1; i>=0; i--){
+		for(int j=n-1; j>=0; j--){
+			printf("%2d ",a[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+```
+
+step 4
+```cpp
+#include <stdio.h>
+int addnum( int a, int b )
+{
+    return a+b;
+}
+
+int main()
+{
+    int ans = addnum(2 ,3 );
+    printf("addnum(2, 3)會得到 %d\n",ans);
+}
+```
