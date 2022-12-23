@@ -731,3 +731,64 @@ int main()
     }
 }
 ```
+# week16
+step 1
+```cpp
+#include <stdio.h>
+int main()
+{
+    char line[300];
+    char * p = line;
+    int n=10;
+    int *p2 = &n;
+    float f=3.1415926;
+    float *p3 = &f;
+    char c='A';
+    char *p4 =&c;
+}
+```
+step 2
+```cpp
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char line[20]="Hello";
+    int n = strlen(line);
+
+    printf("Hrllo字串的長度:%d\n",n);
+
+    char line2[20];
+    strcpy(line2, line);
+    printf("line2 得到 : %s\n",line2);
+
+    printf("比較字串 strcmp(line2, line)得到 %d\n",strcmp(line, line2));
+}
+```
+step 3
+```cpp
+#include <stdio.h>
+int main()
+{
+	printf("請按任意鍵繼續 . . . \n");
+	int n,max,min;
+	scanf("%d",&n);
+	int m[20];
+	for(int a=0; a<n; a++){
+		scanf("%d",&m[a]);
+	}
+	int ans=-999999;
+	for(int a=0; a<n; a++){
+		for(int k=a+1; k<n; k++){
+			if(m[k]-m[a]>ans){
+				ans=m[k]-m[a];
+				max=m[k];
+				min=m[a];
+			}	
+		}
+		
+	}
+
+		printf("最大利潤=%d-%d=%d\n",max,min,ans);
+}
+```
