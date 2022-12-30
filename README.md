@@ -792,3 +792,87 @@ int main()
 		printf("最大利潤=%d-%d=%d\n",max,min,ans);
 }
 ```
+# week17
+step 1
+```cpp
+size(400,400);
+background(#839082);
+rect(100,100,200,200);
+```
+step 2
+```cpp
+void setup()
+{
+  size(400,400);
+  background(#19930F);
+}
+void draw()
+{
+  if(mousePressed)
+  {
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+}
+void keyPressed()
+{
+  if(key=='1') stroke(255,0,0);
+  if(key=='2') stroke(0,255,0);
+  if(key=='3') stroke(0,0,255);
+}
+```
+step 3
+```cpp
+void setup(){
+  size(400,400,P3D);
+}
+
+void draw(){
+  background(##908282);
+  translate(width/2,height/2);
+  rotateY(radians(frameCount));
+  rotateX(radians(frameCount));
+  box(100);
+}
+```
+step 4
+```cpp
+PImage img;
+void setup(){
+  size(400,400);
+  img=loadImage("images.png");
+}
+
+void draw(){
+  image(img, 0, 0, 400, 400);
+}
+```
+step 5
+```cpp
+PImage img, img2, imgBG;
+void setup(){
+  size(400,400);
+  imgBG = loadImage("BG.png");
+  img = loadImage("astro.png");
+  img2 = loadImage("image.png");
+}
+
+void draw(){
+  imageMode(CENTER);
+  image(imgBG, 200, 200, 400, 400);
+  image(img2, 100, 100);
+  image(img, mouseX, mouseY);
+}
+```
+step 6
+```cpp
+import processing.sound.*;
+SoundFile file;
+void setup(){
+  size(300,300);
+  file = new SoundFile(this, "beat.aiff");
+  file.loop();
+}
+void draw(){
+  
+}
+```
